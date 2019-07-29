@@ -1,0 +1,18 @@
+.song-icon{
+   
+    height: 100%;
+    border-radius:5%;
+    padding:5vh 0 0 0;
+}
+h2,h3{
+    color:white
+}
+h3{
+    font-size: 15px;
+}
+img{
+    
+    border-radius: 50%;
+    /* animation: spin 4s linear infinite; */
+}
+/* @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } */

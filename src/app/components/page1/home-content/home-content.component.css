@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Armata' );
+
+#chooseFile{
+	background-color: #dc3545;
+	color: white;
+	
+}
+.modal{
+	position: absolute;
+	top:20vh;
+}
+.header-text{
+	padding-top: 10vh;
+
+}
+.header-button{
+	font-family: 'Armata';
+	font-weight: bold;
+}
+.header-text h1 span {
+	color:red;
+}
+
+.header-text h1{
+	font-family: 'Armata';
+}
+
+.card{
+	border-radius: 5%;
+    
+    background: rgba(0,0,0,0.8);
+	/* box-shadow: 0 15px 25px rgba(0,0,0,0.5); */
+	margin:10px auto;
+	width: 25rem;
+}
+.tours
+{
+	
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	
+}
+
+.card-img-top{
+	margin: 10px auto;
+	height:20vh;
+	width: 20vh;
+}
+.card-title{
+	font-size: 30px;
+	font-weight: bold;
+}
+.card-title,.card-text{
+	color:white;
+	font-family: 'Armata';
+}
+
+img:hover{
+    
+    
+    animation: spin 4s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+#playbtn{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+   
+    font-size: x-large;
+   
+    filter: drop-shadow(0 0 3.1rem rgba(255,255,255, 0.8));
+    margin-left: 50px;
+    margin-right:50px;
+    border:5px solid white;
+    
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Armata' );
+
+.box{
+   
+    margin: 0 auto;
+    margin-top:10vh; 
+    /* padding: 30vh 50vh 30vh 50vh; */
+    text-align: center;
+    height: 550px;
+    
+    max-width: 600px;
+    border-radius: 5%;
+    
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5)
+    
+}
+.song-detail{
+height: 60%;
+border-radius: 5px;
+}
+.song-player{
+    
+    height: 40%;
+    border-radius: 5%;
+}
+.header-button{
+	font-family: 'Armata';
+	font-weight: bold;
+}

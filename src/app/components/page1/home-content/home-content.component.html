@@ -1,0 +1,86 @@
+<div class="header-text text-center">
+    <h1><span >RED</span> BUFFER MUSIC APP</h1>
+</div>
+<div class="header-button text-center" *ngIf="!songsService.getsecondPage()">
+  <button  data-toggle="modal" data-target="#SongsInfoModal" class="btn btn-danger "><i class="fa fa-plus aria-hidden="true></i> Add Song</button>
+</div>
+<div class="box" *ngIf="!songsService.getsecondPage()">
+<div class="tours " >
+  <div class="container-fluid text-center" >
+     <div class="row "> 
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+        <div class="card-columns">
+            <!--  -->
+            <div class="card text-center" *ngFor="let i of Songs;let in=index">
+                <img   class="card-img-top" src="../assets/images/long-play-music.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                  <p class="card-text ">{{i.artist}}</p>
+                  <p class="card-text ">{{i.genre}}</p>
+                  <button  id="playbtn" class="btn btn-lg btn-outline-light" (click)="moveToSecondPage(in)" ><i class="fa fa-play" aria-hidden="true"></i></button>
+                </div>
+              </div>  
+              
+                 
+        </div>
+     </div> 
+       
+    </div> 
+  </div>
+</div>
+</div>
+
+<div *ngIf="songsService.getsecondPage()">
+<router-outlet></router-outlet>
+</div>
+
+<!-- Modal for add songs -->
+<div class="modal" id="SongsInfoModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Song</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Artist</span>
+                  </div>
+                  <input type="text" class="form-control" [(ngModel)]="AddSongObject.artist"  aria-describedby="basic-addon1">
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Genre</span>
+                  </div>
+                  <input type="text" class="form-control" [(ngModel)]="AddSongObject.genre"  aria-describedby="basic-addon1">
+              </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-md-12">
+                <div class="input-group mb-3">                  
+                    <input (change)="getFileName($event)" type="file"  accept=".mp3" class="form-control"  aria-describedby="basic-addon1">
+                </div>
+            </div>
+              
+          </div>
+        <div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="AddSong()">Add</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

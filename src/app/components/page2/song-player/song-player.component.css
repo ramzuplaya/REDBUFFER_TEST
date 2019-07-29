@@ -1,0 +1,79 @@
+progress {
+	width: 400px;
+	height: 14px;
+	margin: 20px auto ;
+	display: block;
+	-webkit-appearance: none;
+    border: none;
+    animation: 1
+}
+
+progress::-webkit-progress-bar {
+	background: black;
+	border-radius: 50px;
+	padding: 2px;
+	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+progress::-webkit-progress-value {
+	border-radius: 50px;
+    box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+    background-image: linear-gradient(
+    -45deg, 
+    rgba(255, 255, 255, .2) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    rgba(255, 255, 255, .2) 50%, 
+    rgba(255, 255, 255, .2) 75%, 
+    transparent 75%, 
+    transparent
+  );
+	background:
+		-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.363), rgba(0, 0, 0, 0.2)),
+		-webkit-linear-gradient(left, #ba7448, #c4672d);
+	
+	background-size: 25px 14px, 100% 100%, 100% 100%;
+	
+}
+
+ #playbtn,#pausebtn{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+   
+    font-size: x-large;
+   
+    filter: drop-shadow(0 0 3.1rem rgba(255,255,255, 0.8));
+    margin-left: 50px;
+    margin-right:50px;
+    border:5px solid white;
+    
+}
+#previousbtn,#nextbtn{
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+   
+    font-size: x-large;
+   
+    filter: drop-shadow(0 0 3.1rem rgba(255,255,255, 0.8));
+    border:5px solid white;
+}
+.song-time{
+    width: 400px;
+    height: 18px;
+    margin:0 auto;
+    
+}
+.song-time label{
+    color: white;
+    font-size: 14px;
+}
+
+.controls{
+    margin:25px auto;
+}
+
+
